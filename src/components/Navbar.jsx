@@ -1,7 +1,7 @@
 import React from "react";
-import { DollarSign, Plus } from "lucide-react";
+import { DollarSign, Plus, TrendingUp, Calendar, PieChart, Bell } from "lucide-react";
 
-function Navbar({ onAddClick }) {
+function Navbar({ onAddClick, onViewStats, onViewReports, onNotificationsClick }) {
   return (
     <nav
       style={{
@@ -29,23 +29,76 @@ function Navbar({ onAddClick }) {
             Expense Tracker
           </h1>
         </div>
-        <button
-          onClick={onAddClick}
-          style={{
-            background: "linear-gradient(to right, #22c55e, #059669)",
-            border: "none",
-            padding: "10px 16px",
-            color: "white",
-            borderRadius: "8px",
-            fontWeight: "600",
-            cursor: "pointer",
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
-          }}
-        >
-          <Plus size={18} /> Add Expense
-        </button>
+        <div style={{ display: "flex", gap: "10px" }}>
+          <button
+            onClick={onAddClick}
+            style={{
+              background: "linear-gradient(to right, #22c55e, #059669)",
+              border: "none",
+              padding: "10px 16px",
+              color: "white",
+              borderRadius: "8px",
+              fontWeight: "600",
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+            }}
+          >
+            <Plus size={18} /> Add Expense
+          </button>
+          <button
+            onClick={onViewStats}
+            style={{
+              background: "linear-gradient(to right, #3b82f6, #2563eb)",
+              border: "none",
+              padding: "10px 16px",
+              color: "white",
+              borderRadius: "8px",
+              fontWeight: "600",
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+            }}
+          >
+            <TrendingUp size={18} /> View Stats
+          </button>
+          <button
+            onClick={onViewReports}
+            style={{
+              background: "linear-gradient(to right, #f97316, #ea580c)",
+              border: "none",
+              padding: "10px 16px",
+              color: "white",
+              borderRadius: "8px",
+              fontWeight: "600",
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+            }}
+          >
+            <PieChart size={18} /> View Reports
+          </button>
+          <button
+            onClick={onNotificationsClick}
+            style={{
+              background: "linear-gradient(to right, #facc15, #eab308)",
+              border: "none",
+              padding: "10px 16px",
+              color: "white",
+              borderRadius: "8px",
+              fontWeight: "600",
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+            }}
+          >
+            <Bell size={18} /> Notifications
+          </button>
+        </div>
       </div>
     </nav>
   );
