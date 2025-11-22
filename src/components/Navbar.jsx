@@ -1,102 +1,101 @@
 import React from "react";
-import { DollarSign, Plus, TrendingUp, Calendar, PieChart, Bell } from "lucide-react";
+import { DollarSign, Plus, TrendingUp, PieChart, Bell } from "lucide-react";
 
 function Navbar({ onAddClick, onViewStats, onViewReports, onNotificationsClick }) {
   return (
     <nav
       style={{
-        background: "white",
-        boxShadow: "0 1px 5px rgba(0,0,0,0.1)",
-        padding: "1rem 2rem",
+        background: "linear-gradient(to right, #7e22ce, #2563eb)",
+        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+        padding: "16px 32px",
       }}
     >
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
           <div
             style={{
-              background: "linear-gradient(to right, purple, blue)",
-              width: "40px",
-              height: "40px",
-              borderRadius: "10px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
+              background: "white",
+              padding: "8px",
+              borderRadius: "8px",
+              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
             }}
           >
-            <DollarSign color="white" size={22} />
+            <DollarSign style={{ color: "#7e22ce" }} size={28} />
           </div>
-          <h1 style={{ fontWeight: "bold", fontSize: "20px", color: "#333" }}>
-            Expense Tracker
-          </h1>
+          <h1 style={{ fontSize: "24px", fontWeight: "bold", color: "white" }}>Expense Tracker</h1>
         </div>
-        <div style={{ display: "flex", gap: "10px" }}>
+        <div style={{ display: "flex", gap: "16px" }}>
           <button
             onClick={onAddClick}
             style={{
-              background: "linear-gradient(to right, #22c55e, #059669)",
-              border: "none",
-              padding: "10px 16px",
+              background: "#22c55e",
               color: "white",
+              padding: "8px 16px",
               borderRadius: "8px",
               fontWeight: "600",
-              cursor: "pointer",
               display: "flex",
               alignItems: "center",
               gap: "8px",
+              border: "none",
+              cursor: "pointer",
+              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
             }}
           >
-            <Plus size={18} /> Add Expense
+            <Plus size={20} /> Add Expense
           </button>
           <button
             onClick={onViewStats}
             style={{
-              background: "linear-gradient(to right, #3b82f6, #2563eb)",
-              border: "none",
-              padding: "10px 16px",
+              background: "#2563eb",
               color: "white",
+              padding: "8px 16px",
               borderRadius: "8px",
               fontWeight: "600",
-              cursor: "pointer",
               display: "flex",
               alignItems: "center",
               gap: "8px",
+              border: "none",
+              cursor: "pointer",
+              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
             }}
           >
-            <TrendingUp size={18} /> View Stats
+            <TrendingUp size={20} /> View Stats
           </button>
           <button
             onClick={onViewReports}
             style={{
-              background: "linear-gradient(to right, #f97316, #ea580c)",
-              border: "none",
-              padding: "10px 16px",
+              background: "#ea580c",
               color: "white",
+              padding: "8px 16px",
               borderRadius: "8px",
               fontWeight: "600",
-              cursor: "pointer",
               display: "flex",
               alignItems: "center",
               gap: "8px",
+              border: "none",
+              cursor: "pointer",
+              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
             }}
           >
-            <PieChart size={18} /> View Reports
+            <PieChart size={20} /> View Reports
           </button>
           <button
             onClick={onNotificationsClick}
             style={{
-              background: "linear-gradient(to right, #facc15, #eab308)",
-              border: "none",
-              padding: "10px 16px",
+              background: "#facc15",
               color: "white",
+              padding: "8px 16px",
               borderRadius: "8px",
               fontWeight: "600",
-              cursor: "pointer",
               display: "flex",
               alignItems: "center",
               gap: "8px",
+              border: "none",
+              cursor: "pointer",
+              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
             }}
           >
-            <Bell size={18} /> Notifications
+            <Bell size={20} /> Notifications
           </button>
         </div>
       </div>
